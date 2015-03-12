@@ -21,7 +21,7 @@ public class GenericDaoJPA<T, ID> implements GenericDao<T, ID> {
     }
 
     public void create(T entity) {
-        EntityManager entityManager = DaoJpaFactory.getEntityManagerFactory().createEntityManager();
+        EntityManager entityManager = DaoJPAFactory.getEntityManagerFactory().createEntityManager();
         try {
             entityManager.getTransaction().begin();
             entityManager.persist(entity);
@@ -37,14 +37,14 @@ public class GenericDaoJPA<T, ID> implements GenericDao<T, ID> {
     }
 
     public T read(ID id) {
-        EntityManager entityManager = DaoJpaFactory.getEntityManagerFactory().createEntityManager();
+        EntityManager entityManager = DaoJPAFactory.getEntityManagerFactory().createEntityManager();
         T entity = entityManager.find(persistentClass, id);
         entityManager.close();
         return entity;
     }
 
     public void update(T entity) {
-        EntityManager entityManager = DaoJpaFactory.getEntityManagerFactory().createEntityManager();
+        EntityManager entityManager = DaoJPAFactory.getEntityManagerFactory().createEntityManager();
         try {
             entityManager.getTransaction().begin();
             entityManager.merge(entity);
@@ -60,7 +60,7 @@ public class GenericDaoJPA<T, ID> implements GenericDao<T, ID> {
     }
 
     public void deleteById(ID id) {
-        EntityManager entityManager = DaoJpaFactory.getEntityManagerFactory().createEntityManager();
+        EntityManager entityManager = DaoJPAFactory.getEntityManagerFactory().createEntityManager();
         T entity = entityManager.find(persistentClass, id);
         if (entity != null) {
             try {
