@@ -8,10 +8,9 @@ import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: Voto
- *
+ * 
  */
 @Entity
-
 public class Voto implements Serializable {
 
 	
