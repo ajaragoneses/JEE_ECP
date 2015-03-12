@@ -1,5 +1,7 @@
 package es.ajaragoneses.votacion.Models.Entities;
 
+import es.ajaragoneses.votacion.Models.Utils.*;
+
 import java.io.Serializable;
 
 import javax.persistence.*;
@@ -23,6 +25,7 @@ public class Voto implements Serializable {
 	
 	private String IP;
 	
+	@Enumerated(EnumType.STRING)
 	private NivelEstudios nivelEstudios;
 	
 	
@@ -77,7 +80,7 @@ public class Voto implements Serializable {
 		return "Voto [id=" + id + 
 						", Valor=" + Valor + 
 						", IP=" + IP + 
-						", NivelEstudios="+this.nivelEstudios.toString()+"]";
+						", NivelEstudios="+this.nivelEstudios.name()+"]";
 	}
 
    
