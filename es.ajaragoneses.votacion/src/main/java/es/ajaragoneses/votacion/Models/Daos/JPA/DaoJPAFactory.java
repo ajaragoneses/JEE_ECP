@@ -2,9 +2,7 @@ package es.ajaragoneses.votacion.Models.Daos.JPA;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
 import org.apache.logging.log4j.LogManager;
-
 import es.ajaragoneses.votacion.Models.Daos.DaoFactory;
 import es.ajaragoneses.votacion.Models.Daos.TemaDao;
 import es.ajaragoneses.votacion.Models.Daos.VotoDao;
